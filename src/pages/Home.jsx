@@ -2,6 +2,7 @@ import React from "react";
 import { Instagram, Globe, Github, Send, ArrowDown, Mouse } from "lucide-react";
 import About from "./About";
 import Skills from "./Skills";
+import Services from "./Services";
 
 const Home = () => {
   return (
@@ -50,6 +51,7 @@ const Home = () => {
       </div>
       <About/>
       <Skills/>
+      <Services/>
     </div>
   );
 };
