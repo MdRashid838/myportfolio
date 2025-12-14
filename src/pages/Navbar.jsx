@@ -11,11 +11,11 @@ const Navbar = () => {
         </div>
           <ul className="flex flex-row gap-5 items-center text-[#313131] text-lg font-semibold">
             <li><Link to={'/'}>Home</Link></li>
-            <li><Link>About</Link></li>
-            <li><Link>Skills</Link></li>
-            <li><Link>Services</Link></li>
-            <li><Link>Portfolio</Link></li>
-            <li><Link>Contact</Link></li>
+            <li><Link to={'/about'}>About</Link></li>
+            <li><Link to={'/skills'}>Skills</Link></li>
+            <li><Link to={'/services'}>Services</Link></li>
+            <li><Link to={"/portfolio"} >Portfolio</Link></li>
+            <li><Link to={"/contact"} >Contact</Link></li>
           </ul>
       </div>
     </div>
