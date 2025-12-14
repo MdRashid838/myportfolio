@@ -43,9 +43,9 @@ const Contact = () => {
                     {" "}
                     {contact.icon}{" "}
                   </span>
-                  <h2 className="text-sm font-semibold text-gray-600">
+                  <a href="https://wa.me/qr/NVYCLJX2TCX2A1" className="text-sm font-semibold text-gray-600">
                     {contact.name}
-                  </h2>
+                  </a>
                   <a
                     href={`${contact.id == 1 ? "mailto:" : "tel:"}${contact.contact}`}
                     className="text-sm font-semibold text-gray-500"
