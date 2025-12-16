@@ -22,14 +22,14 @@ const contact = [
 
 const Contact = () => {
   return (
-    <div className="max-w-[80%] m-auto">
+    <div className="md:max-w-[80%] w-full m-auto">
       <div className="flex flex-col justify-center items-center py-8 gap-1">
         <h1 className="text-3xl font-semibold text-[#313131]">Contact Us</h1>
         <p className="text-sm font-medium text-gray-700">Most Recent Work</p>
       </div>
-      <div className="flex flex-row gap-4 px-10">
+      <div className="flex md:flex-row flex-col gap-10 md:gap-4 md:px-10 p-4">
         <div className="w-full">
-          <div className="max-w-sm flex flex-col sm:flex-col justify-center gap-6">
+          <div className="max-w-sm flex flex-col sm:flex-col justify-center gap-4 md:gap-6">
             <h1 className="text-gray-600 text-lg font-semibold text-center mb-2">
               Talk to me
             </h1>
@@ -67,7 +67,7 @@ const Contact = () => {
         </div>
         <div className="w-full">
           <form>
-            <h2 className="text-gray-600 text-lg font-semibold text-center mb-8">
+            <h2 className="text-gray-600 text-lg font-semibold text-center mb-6 md:mb-8">
               Write me your project
             </h2>
             <div className="flex flex-col gap-7">

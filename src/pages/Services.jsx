@@ -110,17 +110,17 @@ const Services = () => {
   const activeItem = data.find((d) => d.name === active);
   return (
     <div>
-      <div className="min-h-screen">
+      <div>
         <div className="flex flex-col justify-center items-center py-8 gap-1">
           <h1 className="text-3xl font-semibold text-[#313131]">Services</h1>
           <p className="text-sm font-medium text-gray-700">What i offer</p>
         </div>
         <div>
-          <div className="flex flex-row justify-center gap-20">
+          <div className="grid grid-cols-2 justify-center md:gap-20 gap-10 md:p-0 p-4">
             {data.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col border rounded-xl drop-shadow-xl gap-4 w-60 h-64 ps-5 pe-24 pt-20"
+                className="flex flex-col border rounded-xl drop-shadow-xl gap-4 md:w-60 w-40 md:h-64 h-56 ps-5 pe-24 pt-20"
               >
                 <span className="text-lg">{item.icon}</span>
                 <p className="text-xl font-medium text-[#313131]">
@@ -137,11 +137,11 @@ const Services = () => {
 
             {activeItem && (
               <div className="fixed inset-0 bg-gray-50/50 flex justify-center items-center z-50">
-                <div className="flex flex-col max-w-[50%] min-h-[65%] bg-white h-auto gap-2 border rounded-xl p-5">
+                <div className="flex flex-col w-[90%] md:max-w-[50%] min-h-[65%] bg-white md:h-auto h-92 gap-2 border rounded-xl md:p-5 p-3 overflow-y-auto hide-scrollbar">
                   <div className="flex justify-end">
                     <X onClick={() => setActive(null)} />
                   </div>
-                  <div className="flex flex-col gap-2 px-5">
+                  <div className="flex flex-col gap-2 md:px-5">
                     <div className="text-center mb-2">
                       <h1 className="text-2xl font-medium text-[#313131] mb-2">
                         {" "}
