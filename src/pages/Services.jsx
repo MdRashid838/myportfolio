@@ -109,14 +109,14 @@ const Services = () => {
 
   const activeItem = data.find((d) => d.name === active);
   return (
-    <div>
+    <div id="services">
       <div>
         <div className="flex flex-col justify-center items-center py-8 gap-1">
           <h1 className="text-3xl font-semibold text-[#313131]">Services</h1>
           <p className="text-sm font-medium text-gray-700">What i offer</p>
         </div>
         <div>
-          <div className="grid grid-cols-2 justify-center md:gap-20 gap-10 md:p-0 p-4">
+          <div className="flex flex-row justify-center place-items-center md:gap-20 gap-10 md:p-0 p-4">
             {data.map((item, index) => (
               <div
                 key={index}

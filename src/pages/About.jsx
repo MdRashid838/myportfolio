@@ -3,7 +3,7 @@ import { Briefcase, FileText, Award } from "lucide-react";
 
 const About = () => {
   return (
-    <div>
+    <div id="about">
       <div className="flex flex-col justify-center items-center py-4 md:py-8 gap-1">
         <h1 className="text-3xl font-semibold text-[#313131]">About Me</h1>
         <p className="text-sm font-medium text-gray-700">My Introduction</p>

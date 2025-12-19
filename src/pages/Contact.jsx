@@ -22,7 +22,7 @@ const contact = [
 
 const Contact = () => {
   return (
-    <div className="md:max-w-[80%] w-full m-auto">
+    <div id="contact" className="md:max-w-[80%] w-full m-auto">
       <div className="flex flex-col justify-center items-center py-8 gap-1">
         <h1 className="text-3xl font-semibold text-[#313131]">Contact Us</h1>
         <p className="text-sm font-medium text-gray-700">Most Recent Work</p>

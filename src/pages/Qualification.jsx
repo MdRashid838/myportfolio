@@ -98,7 +98,7 @@ export default function Qualification() {
                   {/* Timeline Dot */}
                   <span
                     className={`w-4 h-4 bg-gray-400 rounded-full absolute top-2 ${
-                      isLeft ? "-right-[26px]" : "-left-[26px]"
+                      isLeft ? "-right-[28px]" : "-left-[28px]"
                     }`}
                   ></span>
 
@@ -147,7 +147,7 @@ export default function Qualification() {
                   {/* Timeline Dot */}
                   <span
                     className={`w-4 h-4 bg-gray-400 rounded-full absolute top-2 ${
-                      isLeft ? "-right-[26px]" : "-left-[26px]"
+                      isLeft ? "-right-[28px]" : "-left-[28px]"
                     }`}
                   ></span>
 

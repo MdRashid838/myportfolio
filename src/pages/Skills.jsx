@@ -57,7 +57,7 @@ const backend = [
 
 const Skills = () => {
   return (
-    <div className="min-h-screen">
+    <div id="skills" className="min-h-screen">
       <div className="flex flex-col justify-center items-center py-8 gap-1">
         <h1 className="text-3xl font-semibold text-[#313131]">Skills</h1>
         <p className="text-sm font-medium text-gray-700">My technical level</p>

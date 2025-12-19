@@ -4,7 +4,7 @@ import { ArrowUp } from "lucide-react";
 const GoToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
   const TopWindow = () => {
-    window.scrollTo({ top: 0, left: 0, scrollTo: "smooth" });
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
   const listenScroll = () => {
