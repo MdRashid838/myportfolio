@@ -26,9 +26,9 @@ const GoToTop = () => {
   return (
     <div>
       {isVisible && (
-        <div className="flex justify-center items-center rounded-full bg-[#313131] text-white w-14  fixed bottom-5 right-5 px-4 py-4">
+        <div className="flex justify-center items-center rounded-full bg-[#313131] text-white md:w-14 w-8  fixed md:bottom-5 bottom-18 right-5 md:px-4 py-2  md:py-4">
           <button onClick={TopWindow}>
-            <ArrowUp />
+            <ArrowUp className="size-4 md:size-0 animate-bounce"/>
           </button>
         </div>
       )}

@@ -15,11 +15,12 @@ const Navbar = () => {
   const [active, setActive] = useState(false);
 
   const linkProps = {
-    smooth: true,
-    duration: 500,
-    offset: -80, // sticky navbar height
-    spy: true,
-  };
+  smooth: true,
+  duration: 500,
+  offset: active ? -80 : -10,
+  spy: true,
+};
+
 
   return (
     <>
