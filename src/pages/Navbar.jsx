@@ -60,8 +60,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="portfolio" {...linkProps}>
-                Portfolio
+              <Link to="projects" {...linkProps}>
+                Projects
               </Link>
             </li>
             <li>
@@ -144,12 +144,12 @@ const Navbar = () => {
 
               <li className="py-4">
                 <Link
-                  to="portfolio"
+                  to="projects"
                   {...linkProps}
                   onClick={() => setActive(false)}
                   className="flex flex-col items-center gap-1"
                 >
-                  <Image className="size-4" /> Portfolio
+                  <Image className="size-4" /> Projects
                 </Link>
               </li>
 

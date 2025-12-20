@@ -15,11 +15,11 @@ const projects = [
   },
 ];
 
-const Portfolio = () => {
+const Projects = () => {
   return (
-    <div id="portfolio" className="md:max-w-[80%] w-full md:p-0 p-6 m-auto min-h-screen">
+    <div id="projects" className="md:max-w-[80%] w-full md:p-0 p-6 m-auto min-h-screen">
       <div className="flex flex-col justify-center items-center py-8 gap-1">
-        <h1 className="text-3xl font-semibold text-[#313131]">Portfolio</h1>
+        <h1 className="text-3xl font-semibold text-[#313131]">Projects</h1>
         <p className="text-sm font-medium text-gray-700">Most Recent Work</p>
       </div>
       <div className="w-full">
@@ -53,4 +53,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Projects;
