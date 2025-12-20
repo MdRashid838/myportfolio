@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { Send, ArrowUpRight } from "lucide-react";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
@@ -21,6 +22,28 @@ const contact = [
 ];
 
 const Contact = () => {
+
+   const formRef = useRef();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAIL_PUBLIC_KEY
+      );
+
+      alert("Message sent successfully ");
+      formRef.current.reset();
+    } catch (error) {
+      console.error(error);
+      alert("Failed to send message ");
+    }
+  };
+
   return (
     <div id="contact" className="md:max-w-[80%] w-full m-auto">
       <div className="flex flex-col justify-center items-center py-8 gap-1">
@@ -43,11 +66,16 @@ const Contact = () => {
                     {" "}
                     {contact.icon}{" "}
                   </span>
-                  <a href="https://wa.me/qr/NVYCLJX2TCX2A1" className="text-sm font-semibold text-gray-600">
+                  <a
+                    href="https://wa.me/qr/NVYCLJX2TCX2A1"
+                    className="text-sm font-semibold text-gray-600"
+                  >
                     {contact.name}
                   </a>
                   <a
-                    href={`${contact.id == 1 ? "mailto:" : "tel:"}${contact.contact}`}
+                    href={`${contact.id == 1 ? "mailto:" : "tel:"}${
+                      contact.contact
+                    }`}
                     className="text-sm font-semibold text-gray-500"
                   >
                     {" "}
@@ -66,14 +94,18 @@ const Contact = () => {
           </div>
         </div>
         <div className="w-full">
-          <form>
+          <form ref={formRef} onSubmit={handleSubmit}>
             <h2 className="text-gray-600 text-lg font-semibold text-center mb-6 md:mb-8">
               Write me your project
             </h2>
+
             <div className="flex flex-col gap-7">
+              {/* Name */}
               <label className="relative">
                 <input
                   type="text"
+                  name="name"
+                  required
                   placeholder="Enter your name..."
                   className="border w-full border-gray-400 px-5 py-4 rounded-2xl focus:border-gray-300 hover:border-gray-500"
                 />
@@ -81,9 +113,13 @@ const Contact = () => {
                   Name
                 </span>
               </label>
+
+              {/* Email */}
               <label className="relative">
                 <input
-                  type="text"
+                  type="email"
+                  name="email"
+                  required
                   placeholder="Enter your email..."
                   className="border w-full border-gray-400 px-5 py-4 rounded-2xl focus:border-gray-300 hover:border-gray-500"
                 />
@@ -91,17 +127,25 @@ const Contact = () => {
                   Email
                 </span>
               </label>
+
+              {/* Message */}
               <label className="relative">
                 <textarea
-                  type="textarea"
+                  name="message"
+                  required
                   placeholder="Write about your project..."
-                  className="border w-full h-50 border-gray-400 px-5 py-4 rounded-2xl focus:border-gray-300 hover:border-gray-500"
+                  className="border w-full h-40 border-gray-400 px-5 py-4 rounded-2xl focus:border-gray-300 hover:border-gray-500 resize-none"
                 />
                 <span className="absolute bg-white px-1 text-sm text-gray-600 left-4 -top-3">
                   Project
                 </span>
               </label>
-              <button className="group flex flex-row gap-1 justify-center items-center text-lg text-start hover:bg-[#313131] bg-[#3B3B3B] text-white w-52 px-5 py-4 rounded-2xl">
+
+              {/* Button */}
+              <button
+                type="submit"
+                className="group flex flex-row gap-1 justify-center items-center text-lg hover:bg-[#313131] bg-[#3B3B3B] text-white w-52 px-5 py-4 rounded-2xl"
+              >
                 Send Message
                 <Send className="w-5 transition-transform duration-300 group-hover:rotate-10" />
               </button>

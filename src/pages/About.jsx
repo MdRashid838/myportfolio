@@ -12,7 +12,7 @@ const About = () => {
         <div className="flex md:flex-row flex-col">
           <div className="flex justify-center items-center md:w-1/2 w-full p-10">
             <img
-              src="https://placehold.co/150x150"
+              src="https://lh3.googleusercontent.com/d/1noufSozy1YfBnWN4LctsIg_DOCq1Xk5P"
               alt=""
               className="w-56 md:w-92 rounded-3xl drop-shadow-xl"
             />
@@ -43,9 +43,16 @@ const About = () => {
               distinctio quaerat nisi non? Odio, accusamus molestiae.
             </p>
             <div className="flex md:justify-start justify-center">
-              <button className="w-36 md:w-44 flex items-center flex-row gap-1 border p-3 md:p-4 bg-[#313131] text-white text-sm md:text-lg font-medium rounded-xl">
+              {/* <button className="w-36 md:w-44 flex items-center flex-row gap-1 border p-3 md:p-4 bg-[#313131] text-white text-sm md:text-lg font-medium rounded-xl">
                 Download CV <FileText className="size-5" />
-              </button>
+              </button> */}
+              <a
+                href="/rashidresume1.pdf"
+                download="rashidresume1.pdf"
+                className="w-36 md:w-44 flex items-center flex-row gap-1 border p-3 md:p-4 bg-[#313131] text-white text-sm md:text-lg font-medium rounded-xl"
+              >
+                Download CV <FileText className="size-5" />
+              </a>
             </div>
           </div>
         </div>
