@@ -21,7 +21,6 @@ const Home = () => {
       {/* ===== HERO SECTION ===== */}
       <div className="min-h-screen flex flex-col justify-center">
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-4 lg:gap-14 items-center justify-center p-5 lg:p-4">
-          
           {/* Profile Image */}
           {/* <div className="order-2 lg:order-3 w-full flex justify-center">
             <img
@@ -32,13 +31,12 @@ const Home = () => {
           </div> */}
 
           <div className="order-2 lg:order-3 w-full flex justify-center">
-  <img
-    src="https://lh3.googleusercontent.com/d/1noufSozy1YfBnWN4LctsIg_DOCq1Xk5P"
-    alt="profile"
-    className="w-60 h-60 border-[10px] border-[#313131] animate-profile_animate"
-  />
-</div>
-
+            <img
+              src="https://lh3.googleusercontent.com/d/1noufSozy1YfBnWN4LctsIg_DOCq1Xk5P"
+              alt="profile"
+              className="w-60 h-52 md:h-60 border-[10px] border-[#313131] animate-profile_animate"
+            />
+          </div>
 
           {/* Social Icons */}
           <div className="order-1 lg:order-1 flex flex-col gap-8 items-center text-[#313131]">
@@ -65,9 +63,11 @@ const Home = () => {
               </div>
             </div>
 
-            <button className="group flex items-center gap-1 text-sm md:text-lg
+            <button
+              className="group flex items-center gap-1 text-sm md:text-lg
                                bg-[#3B3B3B] hover:bg-[#313131] text-white
-                               w-28 md:w-36 px-3 py-2 md:px-5 md:py-3 rounded-lg">
+                               w-28 md:w-36 px-3 py-2 md:px-5 md:py-3 rounded-lg"
+            >
               Say Hello
               <Send className="md:w-5 w-4 transition-transform duration-300 group-hover:rotate-12" />
             </button>
