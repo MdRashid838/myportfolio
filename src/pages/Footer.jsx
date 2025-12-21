@@ -1,7 +1,15 @@
 import React from "react";
-import { Linkedin , Github , Instagram } from 'lucide-react';
+import { Linkedin, Github, Instagram } from "lucide-react";
+import { Link } from "react-scroll";
 
 const Footer = () => {
+  const linkProps = {
+    smooth: true,
+    duration: 500,
+    offset: window.innerWidth <= 768 ? -60 : -100,
+    spy: true,
+  };
+
   return (
     <footer className="w-full mb-6 md:mb-0 py-14 flex flex-col items-center justify-center gap-10 text-center bg-gray-50">
       
@@ -12,36 +20,27 @@ const Footer = () => {
 
       {/* Nav Links */}
       <div className="flex gap-12 text-gray-600 text-[16px] font-medium">
-        <a href="about" className="hover:text-[#313131]">
+        <Link to="about" {...linkProps} className="hover:text-[#313131]">
           About
-        </a>
-        <a href="projects" className="hover:text-[#313131]">
+        </Link>
+        <Link to="projects" {...linkProps} className="hover:text-[#313131]">
           Projects
-        </a>
-        <a href="services" className="hover:text-[#313131]">
+        </Link>
+        <Link to="services" {...linkProps} className="hover:text-[#313131]">
           Services
-        </a>
+        </Link>
       </div>
 
       {/* Social Icons */}
       <div className="flex gap-6">
-        <a
-          href="#"
-          className="w-8 h-8 flex items-center justify-center rounded-lg bg-[#313131] text-white"
-        >
-          <Linkedin className="size-4"/>
+        <a href="#" className="w-8 h-8 flex items-center justify-center rounded-lg bg-[#313131] text-white">
+          <Linkedin className="size-4" />
         </a>
-        <a
-          href="#"
-          className="w-8 h-8 flex items-center justify-center rounded-lg bg-[#313131] text-white"
-        >
-          <Github className="size-4"/>
+        <a href="#" className="w-8 h-8 flex items-center justify-center rounded-lg bg-[#313131] text-white">
+          <Github className="size-4" />
         </a>
-        <a
-          href="#"
-          className="w-8 h-8 flex items-center justify-center rounded-lg bg-[#313131] text-white"
-        >
-          <Instagram className="size-4"/>
+        <a href="#" className="w-8 h-8 flex items-center justify-center rounded-lg bg-[#313131] text-white">
+          <Instagram className="size-4" />
         </a>
       </div>
 

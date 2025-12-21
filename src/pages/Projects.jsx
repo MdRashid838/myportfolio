@@ -17,12 +17,12 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div id="projects" className="md:max-w-[80%] w-full md:p-0 p-6 m-auto min-h-screen">
-      <div className="flex flex-col justify-center items-center py-8 gap-1">
+    <div id="projects" className="md:max-w-[80%] w-full h-screen md:p-0 p-6 m-auto min-h-screen">
+      <div className="flex flex-col justify-center items-center py-4 md:py-8 gap-1">
         <h1 className="text-3xl font-semibold text-[#313131]">Projects</h1>
         <p className="text-sm font-medium text-gray-700">Most Recent Work</p>
       </div>
-      <div className="w-full">
+      <div className="w-full mt-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-6">
           {projects.map((project) => (
             <div

@@ -5,7 +5,6 @@ import Skills from "./Skills";
 import Services from "./Services";
 import Projects from "./Projects";
 import Contact from "./Contact";
-import Qualification from "./Qualification";
 import Footer from "./Footer";
 
 const Home = () => {
@@ -19,19 +18,13 @@ const Home = () => {
 
   return (
     <div>
-      <div id="home" className="lg:max-w-[80%] mx-auto">
+      <div id="home" className="lg:max-w-[80%] flex flex-col gap-4 mx-auto">
         {/* ===== HERO SECTION ===== */}
         <div className="min-h-screen flex flex-col justify-center">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-4 lg:gap-14 items-center justify-center p-5 lg:p-4">
-            {/* Profile Image */}
-            {/* <div className="order-2 lg:order-3 w-full flex justify-center">
-            <img
-              src="https://placehold.co/100x100"
-              alt="profile"
-              className="w-60 rounded-full border-[10px] border-[#313131]"
-            />
-          </div> */}
 
+          
+            {/* Profile Image */}
             <div className="order-2 lg:order-3 w-full flex justify-center">
               <img
                 src="https://lh3.googleusercontent.com/d/1noufSozy1YfBnWN4LctsIg_DOCq1Xk5P"

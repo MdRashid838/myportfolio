@@ -144,10 +144,10 @@ const Contact = () => {
               {/* Button */}
               <button
                 type="submit"
-                className="group flex flex-row gap-1 justify-center items-center text-lg hover:bg-[#313131] bg-[#3B3B3B] text-white w-52 px-5 py-4 rounded-2xl"
+                className="group flex flex-row gap-1 justify-center items-center text-sm md:text-lg hover:bg-[#313131] bg-[#3B3B3B] text-white w-36 md:w-52 px-3 md:px-5 py-3 md:py-4 rounded-2xl"
               >
                 Send Message
-                <Send className="w-5 transition-transform duration-300 group-hover:rotate-10" />
+                <Send className="md:w-5 w-4 transition-transform duration-300 group-hover:rotate-10" />
               </button>
             </div>
           </form>
